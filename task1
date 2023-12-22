@@ -1,0 +1,21 @@
+import requests
+from pprint import pprint
+
+# Fetch JSON data from the API
+url = "https://s3.amazonaws.com/open-to-cors/assignment.json"
+response = requests.get(url)
+data = response.json()
+
+# Sort products based on descending popularity
+sorted_products = sorted(data["products"], key=lambda x: x["Popularity"], reverse=True)
+
+# Display the data
+for product in sorted_products:
+    print(f"Title: {product['Title']}")
+    print(f"Price: {product['Price']}")
+    print(f"Popularity: {product['Popularity']}")
+    print(f"Subcategory: {product['Subcategory']}")
+    print("=" * 30)
+
+# Alternatively, you can use pprint to display the entire sorted_products list
+# pprint(sorted_products)

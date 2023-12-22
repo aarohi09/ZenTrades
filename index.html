@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Display</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Display</h1>
+        <div>
+            <label for="displayHandling">Display Handling Options:</label>
+            <select id="displayHandling" multiple>
+                <option value="subcategory">Subcategory</option>
+                <option value="title">Title</option>
+                <option value="price">Price</option>
+                <option value="popularity">Popularity</option>
+            </select>
+            <button id="addBtn">>></button>
+            <button id="removeBtn"><<</button>
+        </div>
+        <table id="productTable">
+            <!-- Table content will be dynamically generated using JavaScript -->
+        </table>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
